@@ -1,37 +1,23 @@
-# Copyright 2019 HAProxy Technologies LLC
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-
+annotations:
+    appVersion: v3.1.7
+    artifacthub.io/changes: |-
+        |
+        Use Ingress Controller v3.1.7 version for base image
 apiVersion: v2
-name: kubernetes-ingress
+appVersion: 3.1.7
 description: A Helm chart for HAProxy Kubernetes Ingress Controller
+engine: gotpl
+home: https://github.com/haproxytech/helm-charts/tree/main/kubernetes-ingress
+icon: https://raw.githubusercontent.com/haproxytech/helm-charts/main/kubernetes-ingress/chart-icon.png
+keywords:
+    - ingress
+    - haproxy
+kubeVersion: '>=1.23.0-0'
+maintainers:
+    - email: dkorunic@haproxy.com
+      name: Dinko Korunic
+name: kubernetes-ingress
+sources:
+    - https://github.com/haproxytech/kubernetes-ingress
 type: application
 version: 1.44.4
-appVersion: 3.1.7
-kubeVersion: ">=1.23.0-0"
-keywords:
-  - ingress
-  - haproxy
-home: https://github.com/haproxytech/helm-charts/tree/main/kubernetes-ingress
-sources:
-  - https://github.com/haproxytech/kubernetes-ingress
-icon: https://raw.githubusercontent.com/haproxytech/helm-charts/main/kubernetes-ingress/chart-icon.png
-maintainers:
-  - name: Dinko Korunic
-    email: dkorunic@haproxy.com
-engine: gotpl
-annotations:
-  artifacthub.io/changes: |
-    - Use Ingress Controller 3.1.7 version for base image
-    - Add service port named admin (#294)
-    - Don't merge controller podAnnotations with crdjob podAnnotations (#293)
